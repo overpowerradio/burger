@@ -20,14 +20,15 @@ app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
 
-var access = require('./mysql-access.js')
+
+var access = require('../mysql-access.js')
 //link to a variable with my passord in it, so it isn't visible on this page. Adding it to the ".gitignore" file will prevent it from being uploaded to git as well.
 
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: access,
-  database: "movie_planner_db"
+  database: "burger_db"
 });
 
 connection.connect(function(err) {
