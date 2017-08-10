@@ -1,0 +1,19 @@
+body {
+	background-color: #663300;
+	color: #ff9933;
+	font-family: 'PT Sans Narrow', 'Slabo 27px', 'Archivo', sans-serif, serif;
+}
+
+#headsect {
+	text-align: center;
+}
+h1 {
+	font-family: 'Sedgwick Ave Display';
+	letter-spacing: 5px;
+}
+
+#headimg {
+	height: 200px;
+	width: auto;
+}
+
