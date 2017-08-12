@@ -13,7 +13,11 @@ h1 {
 }
 
 #headimg {
-	height: 200px;
-	width: auto;
+	height: auto;
+	width: 100%;
+}
+
+#Col3 {
+	float: right;
 }
 

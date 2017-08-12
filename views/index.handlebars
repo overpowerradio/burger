@@ -1,41 +1,56 @@
-<h2>Veggie Burgers to Try!</h2>
-<ul>
-  {{#each burger}}
-    {{#unless this.devoured}}
-      <li>
-        {{this.burger_name}}
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour</button>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+
+        <h2>Burgers to Try!</h2>
+            <ul>
+          
+              {{#each burger}}
+                {{#unless this.devoured}}
+                 
+                <li>
+                {{this.burger_name}}
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                          <input type="hidden" name="devoured" value="true">
+                          <button type="submit">Devour</button>
+                    </form>
+                </li>
+      
+                
+                  {{/unless}}
+              {{/each}}
+            
+            </ul>
+    </div>
+    <div class="col-xs-4">
+        <div id="headsect">
+          <h1>Veggie-a-Burger!</h1>
+          <img src="./assets/img/veggieB.png" id="headimg">
+        </div>
+        <h2>Create a Burger:</h2>
+        <form class="create-update-form" action="/" method="POST">
+
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="burger_name">
+            <button type="submit">Add A Burger</button>
+          </div>
         </form>
-        
-      </li>
-      {{/unless}}
-  {{/each}}
-</ul>
+    </div>
+    <div class="col-xs-4">
+        <div id="Col3">
+          <h2>Burgers You Ate!</h2>
 
-<h2>The Burgers You Ate!</h2>
-
-<ul>
-  {{#each burger}}
-    {{#if this.devoured}}
-      <li>
-        {{this.burger_name}}
-      </li>
-      {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Create a Burger:</h2>
-<form class="create-update-form" action="/" method="POST">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-    <button type="submit">Add A Burger</button>
+          <ul>
+            {{#each burger}}
+              {{#if this.devoured}}
+                <li>
+                  {{this.burger_name}}
+                </li>
+                {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+    </div>
   </div>
-
-  
-</form>
-
-
+</div>
