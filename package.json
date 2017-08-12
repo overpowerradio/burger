@@ -1,10 +1,11 @@
 {
-  "name": "mysql-sequelize-heroku",
+  "name": "mysql-heroku",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,5 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
     "mysql": "^2.14.1"
-  }
-}
-"scripts": {
-    "start": "node server.js"
   }
 }
